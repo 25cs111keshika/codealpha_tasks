@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+
+        .calculator {
+            display: inline-block;
+            border: 2px solid black;
+            padding: 15px;
+        }
+
+        #display {
+            width: 200px;
+            height: 35px;
+            font-size: 18px;
+            text-align: right;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 45px;
+            height: 40px;
+            margin: 3px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Simple Calculator Using JavaScript</h2>
+
+<div class="calculator">
+    <input type="text" id="display" disabled><br>
+
+    <button onclick="add('7')">7</button>
+    <button onclick="add('8')">8</button>
+    <button onclick="add('9')">9</button>
+    <button onclick="setOperator('+')">+</button><br>
+
+    <button onclick="add('4')">4</button>
+    <button onclick="add('5')">5</button>
+    <button onclick="add('6')">6</button>
+    <button onclick="setOperator('-')">-</button><br>
+
+    <button onclick="add('1')">1</button>
+    <button onclick="add('2')">2</button>
+    <button onclick="add('3')">3</button>
+    <button onclick="setOperator('*')">*</button><br>
+
+    <button onclick="clearAll()">C</button>
+    <button onclick="add('0')">0</button>
+    <button onclick="calculate()">=</button>
+    <button onclick="setOperator('/')">/</button>
+
+    <h3>Result: <span id="result"></span></h3>
+</div>
+
+<script>
+    let num1 = "";
+    let num2 = "";
+    let operator = "";
+
+    function add(value) {
+        if (operator === "") {
+            num1 += value;
+            document.getElementById("display").value = num1;
+        } else {
+            num2 += value;
+            document.getElementById("display").value = num2;
+        }
+        calculate(); // real-time result
+    }
+
+    function setOperator(op) {
+        operator = op;
+    }
+
+    function clearAll() {
+        num1 = "";
+        num2 = "";
+        operator = "";
+        document.getElementById("display").value = "";
+        document.getElementById("result").innerHTML = "";
+    }
+
+    function calculate() {
+        let a = parseFloat(num1);
+        let b = parseFloat(num2);
+        let result;
+
+        if (isNaN(a) || isNaN(b)) return;
+
+        switch(operator) {
+            case '+': result = a + b; break;
+            case '-': result = a - b; break;
+            case '*': result = a * b; break;
+            case '/':
+                result = (b === 0) ? "Cannot divide by zero" : a / b;
+                break;
+            case '%': result = a % b; break;
+            default: return;
+        }
+
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+
+</body>
+</html>
