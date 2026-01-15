@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Image Gallery Home</title> 
+        <style>
+            body {
+                text-align: center;
+                font-family: Arial, sans-serif;
+            }
+            h1 {
+                margin-top: 50px;
+            }
+            .nav button {
+                padding: 15px 25px;
+                margin: 10px;
+                font-size: 16px;
+                border: none;
+                background-color: #333;
+                color: white;
+                cursor: pointer;
+                border-radius: 6px;
+            }
+            .nav button:hover {
+                background-color: #3608df;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Image Gallery</h1>
+        <div class="nav">
+            <button onclick="openGallery('nature')">Nature</button>
+            <button onclick="openGallery('historic')">Historic</button>
+            <button onclick="openGallery('art')">Art</button>
+            <button onclick="openGallery('festivals')">Festivals</button>
+            <button onclick="openGallery('all')">All</button>
+        </div>
+        <script>
+            function openGallery(category) {
+            window.location.href = "image-gallery2.html?category=" + category;
+            }
+        </script>
+    </body>
+</html>
