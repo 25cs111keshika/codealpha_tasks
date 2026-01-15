@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Gallery</title>
+    <style>
+        .gallery {
+            text-align: center;
+        }
+        .gallery img {
+            width: 350px;
+            height: 200px;
+            border-radius: 10px;
+            transition: transform 0.5s ease, filter 0.5s ease;
+            cursor: pointer;
+        }
+        .gallery img:hover {
+            transform: scale(1.3);
+            filter: brightness(80%) grayscale(40%);
+        }
+        .hidden {
+            display: none;
+        }
+        .nav {
+            text-align: center;
+            margin: 20px;
+        }
+        .nav button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .nav button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+    <button onclick="location.href='image-gallery1.html'">Home</button>
+</div>
+
+<div class="gallery" id="nature">
+    <h2>Nature Gallery</h2>
+    <table cellpadding="7">
+        <tr>
+            <td>
+                <img src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg">
+                <figcaption>Hummingbird</figcaption>
+            </td>
+            <td>
+                <img src="https://images.pexels.com/photos/247599/pexels-photo-247599.jpeg">
+                <figcaption>Rice Fields</figcaption>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="https://images.pexels.com/photos/212324/pexels-photo-212324.jpeg">
+                <figcaption>Grass Dew</figcaption>
+            </td>
+            <td>
+                <img src="https://images.pexels.com/photos/66898/elephant-cub-tsavo-kenya-66898.jpeg">
+                <figcaption>Elephant</figcaption>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<hr>
+
+<div class="gallery" id="historic">
+    <h2>Historic Places</h2>
+    <table cellpadding="7">
+        <figure>
+                <tr>
+                    <td>
+                        <img src="https://wanderingcarol.com/wp-content/uploads/2023/09/beautiful-historical-places-taj-mahal.jpg" alt="Taj Mahal">
+                        <figcaption>Taj Mahal</figcaption>
+                    </td>
+                    <td><img src="https://wanderingcarol.com/wp-content/uploads/2023/07/colosseum-in-rome-italy.jpg" alt="Colosseum">
+                         <figcaption>Colosseum</figcaption>
+                    </td>
+                </tr>
+                <tr>  
+                    <td><img src="https://wanderingcarol.com/wp-content/uploads/2023/09/best-historical-place-in-the-world-borobudur.jpg" alt="Borobudur">
+                        <figcaption>Borobudur</figcaption>
+                </td>
+                    <td><img src="https://wanderingcarol.com/wp-content/uploads/2023/09/most-historical-places-in-the-world-great-wall-of-china.jpg" alt="The Great Wall of China">
+                        <figcaption>The Great Wall of China</figcaption>
+                    </td>
+                </tr>
+        </figure>
+    </table>
+</div>
+
+<div class="gallery" id="art">
+    <h2>Traditional Arts</h2>
+    <table cellpadding="7">
+       <figure>
+                 <tr>
+                    <td><img src="https://www.madhubani-art.in/wp-content/uploads/2025/05/1.png" alt="Indian traditional art">
+                        <figcaption>India – Madhubani Art</figcaption></td>
+                    <td><img src="https://data.ukiyo-e.org/jaodb/thumbs/Hokusai_Katsushika-36_Views_of_Mt_Fuji-Rain_Storm_beneath_the_Peak-00028864-020219-F12.jpg" alt="Japanese traditional art">
+                        <figcaption>Japan – Ukiyo-e Art</figcaption></td>
+                </tr>
+                 <tr>
+                    <td><img src="https://t4.ftcdn.net/jpg/17/27/61/55/240_F_1727615544_6yvWN3SclHvphLAzawc0KN4AFPONyKZv.jpg" alt="African traditional art">
+                        <figcaption>Africa – Tribal Art</figcaption></td>
+                    <td><img src="https://www.sfomuseum.org/sites/default/files/inline-images/embedded_image.jpg" alt="Mexican traditional art">
+                        <figcaption>Mexico – Folk Art</figcaption></td>
+                </tr>
+        </figure>
+    </table>
+</div>
+
+<div class="gallery" id="festivals">
+    <h2>Festivals</h2>
+    <table cellpadding="7">
+        <figure>
+            <tr>
+                <td><img src="https://media.gettyimages.com/id/2004286674/photo/rio-de-janeiro-brazil-members-of-salgueiro-perform-during-2024-carnival-parades-at-sapucai.jpg?s=612x612&w=0&k=20&c=6USbsvG8s8qxvgVgLe5svS0cBCV_s6IFwzlTGsA9uGk=" alt="Rio Carnival">
+                    <figcaption>Rio Carnival (Brazil)</figcaption></td>
+                <td><img src="https://images.pexels.com/photos/2635390/pexels-photo-2635390.jpeg" alt="Holi">
+                    <figcaption>Holi (India & Nepal)</figcaption></td>
+            </tr>
+            <tr>
+                <td><img src="https://images.pexels.com/photos/9827/pexels-photo-9827.jpeg" alt="Oktoberfest">
+                    <figcaption>Oktoberfest (Germany)</figcaption></td>
+                <td><img src="https://cdn.yipenglanternfestival.in.th/wp-content/uploads/2020/11/Yipeng-Lantern-Festival-Photos-4.jpg" alt="Yi Peng Lantern Festival">
+                    <figcaption>Yi Peng Lantern Festival (Thailand)</figcaption></td>
+                </tr>
+        </figure>
+    </table>
+</div>
+<div class="nav">
+    <button onclick="prevImage()">Previous</button>
+    <button onclick="nextImage()">Next</button>
+</div>
+<script>
+let images = document.querySelectorAll(".gallery img");
+let currentIndex = 0;
+function nextImage() {
+    images[currentIndex].style.border = "none";
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].scrollIntoView({ behavior: "smooth", block: "center" });
+    images[currentIndex].style.border = "3px solid red";
+}
+function prevImage() {
+    images[currentIndex].style.border = "none";
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    images[currentIndex].scrollIntoView({ behavior: "smooth", block: "center" });
+    images[currentIndex].style.border = "3px solid red";
+}
+function showCategory(category) {
+    let sections = document.querySelectorAll(".gallery");
+    sections.forEach(section => {
+        section.classList.remove("hidden");
+        if (category !== "all" && section.id !== category) {
+            section.classList.add("hidden");
+        }
+    });
+}
+const params = new URLSearchParams(window.location.search);
+const category = params.get("category") || "all";
+showCategory(category);
+</script>
+</body>
+</html>
